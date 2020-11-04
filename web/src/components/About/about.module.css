@@ -1,0 +1,9 @@
+.main {
+  & .intro {
+    background: red;
+
+    @media (--media-tablet) {
+      background: blue;
+    }
+  }
+}
