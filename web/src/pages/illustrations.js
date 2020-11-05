@@ -1,3 +1,12 @@
-import NotFoundPage from './404'
+import React from 'react'
+import Layout from '../components/Layout'
 
-export default NotFoundPage
+const Index = (props) => {
+  return (
+    <Layout>
+      <h1>Illustrations</h1>
+    </Layout>
+  )
+}
+
+export default Index

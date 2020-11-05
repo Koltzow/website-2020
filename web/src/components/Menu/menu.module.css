@@ -1,11 +1,13 @@
 @import "../../styles/custom-media.css";
 @import "../../styles/custom-properties.css";
 
-.root {
+.main {
   position: relative;
 
-  @media --media-min-medium {
+  @media (--media-tablet) {
     position: absolute;
+    left: 5rem;
+    top: 5rem;
   }
 }
 
@@ -17,7 +19,13 @@
   display: flex;
   flex-direction: column;
 
-  @media (--media-min-small) {
+  @media (--media-tablet) {
     padding: 1.5em 1.5em;
+  }
+
+  & a {
+    font-size: var(--h2);
+    text-decoration: none;
+    margin: 1rem 0;
   }
 }

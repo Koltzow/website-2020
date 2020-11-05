@@ -1,9 +1,9 @@
-@import './custom-properties.css';
+@import "./custom-properties.css";
+@import "./reset.css";
+@import "./base.css";
 
 html {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-base-size);
-  line-height: var(--font-base-line-height);
+  height: 100%;
 }
 
 body {
@@ -11,6 +11,7 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   margin: 0;
+  height: 100%;
 }
 
 html,

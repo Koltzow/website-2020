@@ -4,12 +4,6 @@ export default {
   title: 'Project Member',
   fields: [
     {
-      title: 'Person',
-      name: 'person',
-      type: 'reference',
-      to: {type: 'person'}
-    },
-    {
       title: 'Roles',
       name: 'roles',
       type: 'array',

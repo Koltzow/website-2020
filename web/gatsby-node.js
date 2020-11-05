@@ -45,3 +45,32 @@ async function createProjectPages (graphql, actions) {
 exports.createPages = async ({graphql, actions}) => {
   await createProjectPages(graphql, actions)
 }
+
+exports.createSchemaCustomization = ({actions}) => {
+  const {createTypes} = actions
+  const typeDefs = `
+    type sanityFrontpage implements Node @dontInfer {
+      description: {
+        _key: String!
+        _type: String!
+        style: String!
+        listItem: String!
+        level: Integer!
+        markDefs: {
+          _key: String!
+          _type: String!
+          href: String!
+        }
+        children: {
+          _key: String!
+          _type: String!
+          text: String!
+          marks: Array!
+          
+        }
+      }
+      title: String!
+    }
+  `
+  createTypes(typeDefs)
+}

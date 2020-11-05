@@ -1,0 +1,118 @@
+.strong {
+  font-weight: 600;
+}
+
+.em {
+  font-style: italic;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.code {
+  font-family: monospace;
+}
+
+.reset {
+  counter-reset: list-number-1 list-bullet-1;
+}
+
+.number {
+  display: list-item;
+  list-style-type: none;
+  counter-increment: list-number-1;
+  counter-reset: list-number-2 list-bullet-1;
+
+  &::before {
+    content: counter(list-number-1) ". ";
+    display: inline-block;
+    min-width: 1.5rem;
+  }
+
+  &.level2 {
+    counter-increment: list-number-2;
+    counter-reset: list-number-3;
+    margin-left: 1rem;
+
+    &::before {
+      content: counter(list-number-2, lower-alpha) ". ";
+    }
+  }
+
+  &.level3 {
+    counter-increment: list-number-3;
+    counter-reset: list-number-4;
+    margin-left: 2rem;
+
+    &::before {
+      content: counter(list-number-3, lower-roman) ". ";
+    }
+  }
+
+  &.level4 {
+    counter-increment: list-number-4;
+    counter-reset: list-number-5;
+    margin-left: 3rem;
+
+    &::before {
+      content: counter(list-number-4) ". ";
+    }
+  }
+
+  &.level5 {
+    counter-increment: list-number-5;
+    counter-reset: list-number-6;
+    margin-left: 4rem;
+
+    &::before {
+      content: counter(list-number-5, lower-alpha) ". ";
+    }
+  }
+
+  &.level6 {
+    counter-increment: list-number-6;
+    counter-reset: list-number-7;
+    margin-left: 5rem;
+
+    &::before {
+      content: counter(list-number-6, lower-roman) ". ";
+    }
+  }
+}
+
+.bullet {
+  display: list-item;
+  counter-reset: list-number-1;
+  list-style-type: disc;
+  list-style-position: inside;
+
+  &.level2 {
+    margin-left: 1rem;
+    list-style-type: circle;
+  }
+
+  &.level3 {
+    margin-left: 2rem;
+    list-style-type: square;
+  }
+
+  &.level4 {
+    margin-left: 3rem;
+    list-style-type: disc;
+  }
+
+  &.level5 {
+    margin-left: 4rem;
+    list-style-type: circle;
+  }
+
+  &.level6 {
+    margin-left: 5rem;
+    list-style-type: square;
+  }
+}

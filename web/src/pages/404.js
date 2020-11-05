@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import SEO from '../components/Seo'
 
-const NotFoundPage = () => (
+const Index = () => (
   <Layout>
     <SEO title='404: Not found' />
     <h1>NOT FOUND</h1>
@@ -11,4 +11,4 @@ const NotFoundPage = () => (
   </Layout>
 )
 
-export default NotFoundPage
+export default Index

@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../containers/layout'
-import About from '../components/About/About'
+import Layout from '../components/Layout'
+import About from '../components/About'
 
 const Index = (props) => {
   return (

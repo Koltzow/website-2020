@@ -1,13 +1,9 @@
 import React from 'react'
-import Menu from './Menu/Menu'
 
-import '../styles/layout.css'
-import styles from './layout.module.css'
+import styles from './footer.module.css'
 
-const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
-  <>
-    <Menu siteTitle={siteTitle} onHideNav={onHideNav} onShowNav={onShowNav} showNav={showNav} />
-    <div className={styles.content}>{children}</div>
+const Footer = () => {
+  return (
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
         <div className={styles.siteInfo}>
@@ -17,7 +13,7 @@ const Layout = ({children, onHideNav, onShowNav, showNav, siteTitle}) => (
         </div>
       </div>
     </footer>
-  </>
-)
+  )
+}
 
-export default Layout
+export default Footer
